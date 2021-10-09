@@ -1,9 +1,10 @@
 {
-  "name": "template",
-  "trademark": "ONLYOFFICE",
-  "installpath": "/data/wwwroot/onlyoffice",
-  "compose_file": "docker-compose-production.yml",
-  "env_file": ".env_all",
+  "name": "collabora",
+  "trademark": "Collabora",
+  "installpath": "/data/wwwroot/collabora",
+  "compose_file": "docker-compose.yml",
+  "fork_url": "  https://github.com/CollaboraOnline/online",
+  "env_file": ".env",
   "requirements":{
     "cpu_arch": "Linux x86-64, ARM 32/64, Windows x86-64, IBM POWER8, x86/i686",
     "cpu": "2",
