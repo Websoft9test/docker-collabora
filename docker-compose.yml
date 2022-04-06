@@ -5,12 +5,14 @@
 version: '3.8'
 services:
   collabora-online:
-    container_name: ${APP_NAME}-mysql
+    container_name: ${APP_NAME}
     image: collabora/code:${APP_VERSION}
     environment:
-     - domain=<your-dot-escaped-domain>
-     - username=admin
-     - password=S3cRet
+     - domain=${APP_URL}
+     - username=${APP_USER}
+     - password=${APP_PASSWORD}
+     - DONT_GEN_SSL_CERT=YES
+     - extra_params=--o:ssl.enable=false --o:ssl.termination=true
     ports:
       - ${APP_PORT}:9980
     tty: true
